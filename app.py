@@ -54,39 +54,19 @@ max_tokens = st.slider(
     help=f"Adjust the maximum number of tokens (words) for the model's response. Max for selected model: {max_tokens_range}"
 )
 
-# Function to generate chat responses
-def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
-    full_response = ""
-    for chunk in chat_completion:
-        try:
-            # Check if there is content in the response chunk
-            if chunk.choices[0].delta.content:
-                chunk_content = chunk.choices[0].delta.content
-                st.write(f"Chunk received: {chunk_content}")  # Debugging log for each chunk
-                yield chunk_content  # Yield the chunk content
-                full_response += chunk_content  # Collect full response
-        except Exception as e:
-            st.error(f"Error processing response chunk: {e}")
-
-    return full_response  # Return the full response after streaming
-
-# Function to detect if input is a Bible verse reference
-def is_biblical_text(input_text):
-    # Basic regex to check for common Bible reference formats, e.g., "john 1:1"
-    return bool(re.match(r'^[1-3]?[a-zA-Z]+\s\d+:\d+', input_text))
-
-# Function to check if the input is a name (for genealogy or notable works)
-def is_name(input_text):
-    return len(input_text.split()) == 1
-
-# Function to generate appropriate response based on the input type
-def generate_response_based_on_input(prompt):
-    if is_biblical_text(prompt):
-        return f"Provide biblical context and meaning for the Bible verse {prompt}"
-    elif is_name(prompt):
-        return f"Provide biblical genealogy and notable works for the name {prompt} in the Bible alone"
-    else:
-        return f"Provide a biblical description or explanation for the keyword '{prompt}'"
+# Custom CSS for the scrollable chat history
+st.markdown("""
+    <style>
+        .chat-container {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 0px;
+            display:none;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
 # Display chat messages from history in a scrollable container if there are messages
 if st.session_state.messages:
@@ -99,6 +79,32 @@ if st.session_state.messages:
 else:
     st.write("No chat history yet. Start a conversation by typing a message.")
 
+# Function to generate chat responses
+def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
+    for chunk in chat_completion:
+        if chunk.choices[0].delta.content:
+            yield chunk.choices[0].delta.content
+
+# Function to detect if input is a Bible verse reference
+def is_biblical_text(input_text):
+    # Basic regex to check for common Bible reference formats, e.g., "john 1:1"
+    return bool(re.match(r'^[1-3]?[a-zA-Z]+\s\d+:\d+', input_text))
+
+# Function to check if the input is a name (for genealogy or notable works)
+def is_name(input_text):
+    # You can improve this with more sophisticated checks
+    # For now, this is a simple assumption: if it's a single word, treat it as a name
+    return len(input_text.split()) == 1
+
+# Function to generate appropriate response based on the input type
+def generate_response_based_on_input(prompt):
+    if is_biblical_text(prompt):
+        return f"Provide biblical context and meaning for the Bible verse {prompt}"
+    elif is_name(prompt):
+        return f"Provide biblical genealogy and notable works for the name {prompt}"
+    else:
+        return f"Provide a biblical description for the keyword '{prompt}'"
+
 # Handle new chat input
 if prompt := st.chat_input("What do you want to ask?"):
     # Generate specific task based on user input
@@ -107,8 +113,6 @@ if prompt := st.chat_input("What do you want to ask?"):
 
     with st.chat_message("user", avatar='🤠'):
         st.markdown(prompt)
-
-    full_response = ""  # Initialize full_response as an empty string
 
     try:
         chat_completion = client.chat.completions.create(
@@ -120,18 +124,14 @@ if prompt := st.chat_input("What do you want to ask?"):
             max_tokens=max_tokens,
             stream=True
         )
-
         with st.chat_message("assistant", avatar="✨"):
-            # Collect responses from the generator and display them immediately
             chat_responses_generator = generate_chat_responses(chat_completion)
-            for chunk in chat_responses_generator:
-                st.markdown(chunk)  # Immediately display each chunk
-
+            full_response = st.write_stream(chat_responses_generator)
     except Exception as e:
         st.error(e, icon="🚨")
-
-    # Ensure full_response is appended after AI interaction
-    if full_response:
+    
+    if isinstance(full_response, str):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
     else:
-        st.session_state.messages.append({"role": "assistant", "content": "Sorry, I couldn't process your request."})
+        combined_response = "\n".join(str(item) for item in full_response)
+        st.session_state.messages.append({"role": "assistant", "content": combined_response})
