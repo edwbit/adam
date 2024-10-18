@@ -54,19 +54,18 @@ max_tokens = st.slider(
     help=f"Adjust the maximum number of tokens (words) for the model's response. Max for selected model: {max_tokens_range}"
 )
 
-# # Custom CSS for the scrollable chat history
-# st.markdown("""
-#     <style>
-#         .chat-container {
-#             max-height: 400px;
-#             overflow-y: auto;
-#             border: none;
-#             padding: 10px;
-#             margin-bottom: 0px;
-            
-#         }
-#     </style>
-#     """, unsafe_allow_html=True)
+# Custom CSS for the scrollable chat history
+st.markdown("""
+    <style>
+        .chat-container {
+            max-height: 400px;
+            overflow-y: auto;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
 # Display chat messages from history in a scrollable container if there are messages
 if st.session_state.messages:
