@@ -63,7 +63,7 @@ st.markdown("""
             border: 1px solid #ccc;
             padding: 10px;
             margin-bottom: 0px;
-            display:none;
+            
         }
     </style>
     """, unsafe_allow_html=True)
