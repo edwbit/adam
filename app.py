@@ -80,27 +80,19 @@ else:
 
 # Function to generate chat responses
 def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
+    full_response = ""
     for chunk in chat_completion:
-        if chunk.choices[0].delta.content:
-            yield chunk.choices[0].delta.content
+        try:
+            # Check if there is content in the response chunk
+            if chunk.choices[0].delta.content:
+                chunk_content = chunk.choices[0].delta.content
+                st.write(f"Chunk received: {chunk_content}")  # Debugging log for each chunk
+                yield chunk_content  # Yield the chunk content
+                full_response += chunk_content  # Collect full response
+        except Exception as e:
+            st.error(f"Error processing response chunk: {e}")
 
-# Function to detect if input is a Bible verse reference
-def is_biblical_text(input_text):
-    # Basic regex to check for common Bible reference formats, e.g., "john 1:1"
-    return bool(re.match(r'^[1-3]?[a-zA-Z]+\s\d+:\d+', input_text))
-
-# Function to check if the input is a name (for genealogy or notable works)
-def is_name(input_text):
-    return len(input_text.split()) == 1
-
-# Function to generate appropriate response based on the input type
-def generate_response_based_on_input(prompt):
-    if is_biblical_text(prompt):
-        return f"Provide biblical context and meaning for the Bible verse {prompt}"
-    elif is_name(prompt):
-        return f"Provide biblical genealogy and notable works for the name {prompt} in the Bible alone"
-    else:
-        return f"Provide a biblical description or explanation for the keyword '{prompt}'"
+    return full_response  # Return the full response after streaming
 
 # Handle new chat input
 if prompt := st.chat_input("What do you want to ask?"):
@@ -125,15 +117,17 @@ if prompt := st.chat_input("What do you want to ask?"):
         )
 
         with st.chat_message("assistant", avatar="✨"):
-            # Collect responses from the generator and join them as a string
+            # Collect responses from the generator and display them immediately
             chat_responses_generator = generate_chat_responses(chat_completion)
-            full_response = "".join(list(chat_responses_generator))  # Collect all chunks into one string
+            for chunk in chat_responses_generator:
+                st.markdown(chunk)  # Immediately display each chunk
 
     except Exception as e:
         st.error(e, icon="🚨")
 
-    # Ensure full_response is handled properly after AI interaction
+    # Ensure full_response is appended after AI interaction
     if full_response:
         st.session_state.messages.append({"role": "assistant", "content": full_response})
     else:
         st.session_state.messages.append({"role": "assistant", "content": "Sorry, I couldn't process your request."})
+
