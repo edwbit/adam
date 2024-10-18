@@ -60,7 +60,7 @@ st.markdown("""
         .chat-container {
             max-height: 400px;
             overflow-y: auto;
-            border: 1px solid #ccc;
+            border: none;
             padding: 10px;
             margin-bottom: 0px;
             
@@ -72,7 +72,7 @@ st.markdown("""
 if st.session_state.messages:
     st.markdown('<div class="chat-container">', unsafe_allow_html=True)
     for message in st.session_state.messages:
-        avatar = '✨' if message["role"] == "biblical assistant" else '🤠'
+        avatar = '✨' if message["role"] == "assistant" else '🤠'
         with st.chat_message(message["role"], avatar=avatar):
             st.markdown(message["content"])
     st.markdown('</div>', unsafe_allow_html=True)
