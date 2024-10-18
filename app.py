@@ -60,7 +60,7 @@ st.markdown("""
         .chat-container {
             max-height: 400px;
             overflow-y: auto;
-            
+            border: 1px solid #ccc;
             padding: 10px;
             margin-bottom: 0px;
             
