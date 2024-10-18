@@ -72,7 +72,7 @@ st.markdown("""
 if st.session_state.messages:
     st.markdown('<div class="chat-container">', unsafe_allow_html=True)
     for message in st.session_state.messages:
-        avatar = '✨' if message["role"] == "assistant" else '🤠'
+        avatar = '✨' if message["role"] == "biblical assistant" else '🤠'
         with st.chat_message(message["role"], avatar=avatar):
             st.markdown(message["content"])
     st.markdown('</div>', unsafe_allow_html=True)
@@ -103,7 +103,7 @@ def generate_response_based_on_input(prompt):
     elif is_name(prompt):
         return f"Provide biblical genealogy and notable works for the name {prompt} in the Bible alone"
     else:
-        return f"Provide a biblical description for the keyword '{prompt}'"
+        return f"Provide a biblical description or explanation for the keyword '{prompt}'"
 
 # Handle new chat input
 if prompt := st.chat_input("What do you want to ask?"):
@@ -113,7 +113,7 @@ if prompt := st.chat_input("What do you want to ask?"):
 
     with st.chat_message("user", avatar='🤠'):
         st.markdown(prompt)
-
+    full_response = None  # Initialize full_response to avoid undefined variable error
     try:
         chat_completion = client.chat.completions.create(
             model=model_option,
