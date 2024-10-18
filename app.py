@@ -92,8 +92,6 @@ def is_biblical_text(input_text):
 
 # Function to check if the input is a name (for genealogy or notable works)
 def is_name(input_text):
-    # You can improve this with more sophisticated checks
-    # For now, this is a simple assumption: if it's a single word, treat it as a name
     return len(input_text.split()) == 1
 
 # Function to generate appropriate response based on the input type
@@ -113,7 +111,9 @@ if prompt := st.chat_input("What do you want to ask?"):
 
     with st.chat_message("user", avatar='🤠'):
         st.markdown(prompt)
-    full_response = None  # Initialize full_response to avoid undefined variable error
+
+    full_response = ""  # Initialize full_response as an empty string
+
     try:
         chat_completion = client.chat.completions.create(
             model=model_option,
@@ -124,14 +124,17 @@ if prompt := st.chat_input("What do you want to ask?"):
             max_tokens=max_tokens,
             stream=True
         )
+
         with st.chat_message("assistant", avatar="✨"):
+            # Collect responses from the generator and join them as a string
             chat_responses_generator = generate_chat_responses(chat_completion)
-            full_response = st.write_stream(chat_responses_generator)
+            full_response = "".join(list(chat_responses_generator))  # Collect all chunks into one string
+
     except Exception as e:
         st.error(e, icon="🚨")
-    
-    if isinstance(full_response, str):
+
+    # Ensure full_response is handled properly after AI interaction
+    if full_response:
         st.session_state.messages.append({"role": "assistant", "content": full_response})
     else:
-        combined_response = "\n".join(str(item) for item in full_response)
-        st.session_state.messages.append({"role": "assistant", "content": combined_response})
+        st.session_state.messages.append({"role": "assistant", "content": "Sorry, I couldn't process your request."})
