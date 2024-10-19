@@ -101,7 +101,7 @@ def generate_response_based_on_input(prompt):
     if is_biblical_text(prompt):
         return f"Provide biblical context and meaning for the Bible verse {prompt}"
     elif is_name(prompt):
-        return f"Provide biblical genealogy and notable works for the name {prompt}"
+        return f"Provide biblical genealogy and biography for the name {prompt}"
     else:
         return f"Provide a biblical description for the keyword '{prompt}'"
 
