@@ -106,7 +106,7 @@ def generate_response_based_on_input(prompt):
         return f"Provide a biblical description for the keyword '{prompt}'"
 
 # Handle new chat input
-if prompt := st.chat_input("What do you want to ask?"):
+if prompt := st.chat_input("Type a biblical character or bible verse"):
     # Generate specific task based on user input
     task_description = generate_response_based_on_input(prompt)
     # st.session_state.messages.append({"role": "user", "content": f"{prompt} \n{task_description}\nProvide links to source if you can"})
