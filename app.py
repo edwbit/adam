@@ -109,7 +109,8 @@ def generate_response_based_on_input(prompt):
 if prompt := st.chat_input("What do you want to ask?"):
     # Generate specific task based on user input
     task_description = generate_response_based_on_input(prompt)
-    st.session_state.messages.append({"role": "user", "content": f"{prompt} \n{task_description}\nProvide links to source if you can"})
+    # st.session_state.messages.append({"role": "user", "content": f"{prompt} \n{task_description}\nProvide links to source if you can"})
+    st.session_state.messages.append({"role": "user", "content": f" Provide brief and concise: {prompt} \n{task_description}"})
 
     with st.chat_message("user", avatar='🤠'):
         st.markdown(prompt)
