@@ -54,19 +54,19 @@ max_tokens = st.slider(
     help=f"Adjust the maximum number of tokens (words) for the model's response. Max for selected model: {max_tokens_range}"
 )
 
-# Custom CSS for the scrollable chat history
-st.markdown("""
-    <style>
-        .chat-container {
-            max-height: 400px;
-            overflow-y: auto;
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 0px;
-            display:none;
-        }
-    </style>
-    """, unsafe_allow_html=True)
+# # Custom CSS for the scrollable chat history
+# st.markdown("""
+#     <style>
+#         .chat-container {
+#             max-height: 400px;
+#             overflow-y: auto;
+#             border: 1px solid #ccc;
+#             padding: 10px;
+#             margin-bottom: 0px;
+#             display:none;
+#         }
+#     </style>
+#     """, unsafe_allow_html=True)
 
 # Display chat messages from history in a scrollable container if there are messages
 if st.session_state.messages:
@@ -101,7 +101,7 @@ def generate_response_based_on_input(prompt):
     if is_biblical_text(prompt):
         return f"Provide biblical context and meaning for the Bible verse {prompt}"
     elif is_name(prompt):
-        return f"Provide biblical genealogy and biography for the name {prompt}"
+        return f"Provide biblical genealogy and historical biography for the name {prompt}"
     else:
         return f"Provide a biblical description for the keyword '{prompt}'"
 
