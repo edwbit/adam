@@ -104,7 +104,7 @@ def generate_response_based_on_input(prompt):
     if is_bible_verse(prompt):
         return f"""Using {bible}, Provide  exegesis of each keyword.Provide biblical context of the verse. Provide deep and analytical meaning. 
         Provide key points backed with bible verses. Provide illsutration for emphasis. Provide life application for the Bible verse {prompt}. 
-        Provide response in proper order and do not add anything else"""
+        Use clear, specific language. Avoid unnecessary instructions or bland statements. Provide response in proper order and do not add anything else"""
     elif is_name(prompt):
         return f"Using {bible}, Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}."
     else:
