@@ -6,6 +6,50 @@ from groq import Groq
 # Set up the page configuration
 st.set_page_config(page_icon="🕎", layout="centered", page_title="Groq Adam")
 
+# Add JavaScript function for copying text
+st.markdown("""
+<script>
+function copyText(elementId) {
+    const text = document.getElementById(elementId).innerText;
+    navigator.clipboard.writeText(text).then(
+        function() {
+            // Change button text temporarily
+            const button = document.querySelector(`button[onclick="copyText('${elementId}')"]`);
+            const originalText = button.innerText;
+            button.innerText = '✓ Copied!';
+            setTimeout(() => {
+                button.innerText = originalText;
+            }, 2000);
+        }
+    ).catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
+}
+</script>
+""", unsafe_allow_html=True)
+
+# Add custom CSS for copy button
+st.markdown("""
+<style>
+.copy-button {
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    float: right;
+    margin: -10px 0;
+}
+.copy-button:hover {
+    background-color: #f0f0f0;
+}
+.message-container {
+    position: relative;
+    padding-right: 100px;  /* Make space for the copy button */
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.sidebar.title("Groq Adam")  # App name
 st.sidebar.caption("App created by AI")
 api_key = st.sidebar.text_input("Enter your API key and press Enter", type="password")
@@ -75,16 +119,37 @@ selected_doctrine = st.selectbox(
 )
 
 # Display chat messages from history in a scrollable container if there are messages
+# if st.session_state.messages:
+#     st.markdown('<div class="chat-container">', unsafe_allow_html=True)
+#     for message in st.session_state.messages:
+#         avatar = '📖' if message["role"] == "assistant" else '😊'
+#         with st.chat_message(message["role"], avatar=avatar):
+#             st.markdown(message["content"])
+#     st.markdown('</div>', unsafe_allow_html=True)
+# else:
+#     st.write("No chat history yet. Start a conversation by typing a message.")
+
 if st.session_state.messages:
     st.markdown('<div class="chat-container">', unsafe_allow_html=True)
-    for message in st.session_state.messages:
+    for idx, message in enumerate(st.session_state.messages):
         avatar = '📖' if message["role"] == "assistant" else '😊'
         with st.chat_message(message["role"], avatar=avatar):
-            st.markdown(message["content"])
+            if message["role"] == "assistant":
+                # Create a unique ID for each message
+                message_id = f"message-{idx}"
+                # Wrap the message content in a div with the unique ID
+                st.markdown(f"""
+                    <div class="message-container">
+                        <div id="{message_id}">{message["content"]}</div>
+                        <button class="copy-button" onclick="copyText('{message_id}')">📋 Copy</button>
+                    </div>
+                    """, unsafe_allow_html=True)
+            else:
+                st.markdown(message["content"])
     st.markdown('</div>', unsafe_allow_html=True)
 else:
     st.write("No chat history yet. Start a conversation by typing a message.")
-
+    
 # Function to generate chat responses
 def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
     for chunk in chat_completion:
