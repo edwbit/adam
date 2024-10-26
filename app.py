@@ -104,11 +104,22 @@ bible = "New King James Version"
 guidelines = """Use clear, specific language. Avoid unnecessary instructions or bland statements.
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
+#structure
+appeal ="""Begin by describing a universal human experience or emotion that is relevant to the topic at hand. This helped to establish a connection with his audience and make the topic more relatable."""
+
+description="""describe the human condition in relation to the experience or emotion he introduced earlier. This often involved highlighting the problems, contradictions, or paradoxes that humans face in this area."""
+
+solution="""Present the Bible-based solution to the problem or paradox he described earlier. This often involved explaining how the Bible provides a coherent and satisfying answer to the human dilemma."""
+
+illustration="""Use illustrations and analogies to explain complex ideas in simple terms. Use stories, metaphors, or examples to help his audience understand the Bible-based solution."""
+
+defense="""Anticipate and respond to common objections or criticisms of the Bible-based solution. This often involved using reason, evidence, and logical argument to defend the Bible-based position."""
+
+
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
     if is_bible_verse(prompt):
-        return f"""Using {bible}, Provide  exegesis of each keyword.Provide biblical context of the verse. Provide deep and analytical meaning. Provide exposition.
-        Provide key points backed with bible verses. Provide illustration. Provide spiritual life application. Provide conclusion. Provide call to action. These must be based on the Bible verse {prompt}. 
+        return f"""Using {bible}, Provide A. {appeal}. B. {description}. C.{solution}. D. {illustration}. E. {defense}. These must be based on the Bible verse {prompt}. 
         {guidelines}"""
     elif is_name(prompt):
         return f"Using {bible}, Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}. {guidelines}"
