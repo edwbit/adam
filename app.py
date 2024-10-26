@@ -99,17 +99,21 @@ def is_name(input_text):
     return len(input_text.split()) == 1
 # define Bible version
 bible = "New King James Version"
+
+#guidelines
+guidelines = """Use clear, specific language. Avoid unnecessary instructions or bland statements.Use markdown features for readability.
+        Provide response in proper order and do not add anything else"""
+
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
     if is_bible_verse(prompt):
         return f"""Using {bible}, Provide  exegesis of each keyword.Provide biblical context of the verse. Provide deep and analytical meaning. 
         Provide key points backed with bible verses. Provide high quality and real-life illustration for emphasis. Provide life application for the Bible verse {prompt}. 
-        Use clear, specific language. Avoid unnecessary instructions or bland statements.Use markdown features for readability.
-        Provide response in proper order and do not add anything else"""
+        {guidelines}"""
     elif is_name(prompt):
-        return f"Using {bible}, Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}."
+        return f"Using {bible}, Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}. {guidelines}"
     else:
-        return f"Using {bible}, Provide a biblical description for the keyword '{prompt}'"
+        return f"Using {bible}, Provide a biblical description for the keyword '{prompt}'. {guidelines}"
 
 # Handle new chat input
 if prompt := st.chat_input("Type a biblical character or bible verse"):
