@@ -86,7 +86,7 @@ def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
             yield chunk.choices[0].delta.content
 
 # Function to detect if input is a Bible verse reference
-def is_biblical_text(input_text):
+def is_bible_verse(input_text):
     # Basic regex to check for common Bible reference formats, e.g., "john 1:1"
     pattern = r'^([1-3] )?(?:1st|2nd|3rd|[1-3])? ?[a-zA-Z]+(?: [a-zA-Z]+)?(?: [a-zA-Z]+)?,? \d+:\d+$'
     return bool(re.match(pattern, input_text, re.IGNORECASE))
