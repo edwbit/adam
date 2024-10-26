@@ -108,7 +108,7 @@ def is_name(input_text):
 bible = "New King James Version"
 
 #guidelines
-guidelines = """Use clear, specific {language_selected}. Avoid unnecessary instructions or bland statements.
+guidelines = """Use clear, specific {selected_language}. Avoid unnecessary instructions or bland statements.
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
