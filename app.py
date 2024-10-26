@@ -98,7 +98,7 @@ def is_name(input_text):
     # For now, this is a simple assumption: if it's a single word, treat it as a name
     return len(input_text.split()) == 1
 # define Bible version
-bibble = "New King James Version"
+bible = "New King James Version"
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
     if is_biblical_text(prompt):
