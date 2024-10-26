@@ -68,10 +68,10 @@ max_tokens = st.slider(
 #     </style>
 #     """, unsafe_allow_html=True)
 
-#language option
-language = ["English","Cebuano"]
-selected_language = st.selectbox(
-    'Select language', language, index=0,format_func=lambda x: x.upper()
+#doctrine option
+doctrine = ["Roman Catholic and other Sunday Keepers","Seventh-day Adventist and other Sabbath Keepers"]
+selected_doctrine = st.selectbox(
+    'Select doctrine', doctrine, index=0,format_func=lambda x: x.upper()
 )
 
 # Display chat messages from history in a scrollable container if there are messages
@@ -107,7 +107,7 @@ def is_name(input_text):
 bible = "New King James Version"
 
 #guidelines
-guidelines = f"""Use clear, specific {selected_language}. Use a buleted list for readability. Avoid unnecessary instructions or bland statements.
+guidelines = f"""Use clear, specific {selected_doctrine}. Use a buleted list for readability. Avoid unnecessary instructions or bland statements.
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
