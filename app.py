@@ -113,13 +113,9 @@ guidelines = """Use clear, specific {language_selected}. Avoid unnecessary instr
 
 #structure
 introduction = "Providing context, background information, and an overview of the passage, including its literary and historical settings, the author's purpose, and the theological themes, as well as engaging the audience and previewing the main points to be covered."
-
 exegesis = "Analyzing the words, phrases, and sentences of the passage in their original language and cultural context, including understanding the lexical meaning of key words and phrases, examining the grammatical and syntactical structure, identifying literary devices and rhetorical techniques, considering the historical and cultural background, and evaluating the theological implications."
-
 exposition = "Presenting the main ideas and theological themes of the passage in a clear and concise manner, including identifying the central argument or proposition, explaining the relationships between ideas and concepts, providing bridges between verses, highlighting key figures and events, and synthesizing the ideas and themes into a cohesive whole."
-
 application = "Explaining and illustrating how to apply the main ideas and theological themes of the passage to everyday life, including identifying moral and ethical implications, providing practical suggestions, encouraging reflection, offering warnings and admonitions, and calling the audience to action."
-
 conclusion = "Summarizing the main points and providing a final application, call to action, or challenge, including restating the main arguments and themes, highlighting key takeaways, providing a memorable summary, and encouraging the audience to respond and act on the message of the passage."
 
 
