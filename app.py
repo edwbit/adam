@@ -68,7 +68,6 @@ max_tokens = st.slider(
 #     </style>
 #     """, unsafe_allow_html=True)
 
-#language
 #language option
 language = ["English","Cebuano"]
 selected_language = st.selectbox(
