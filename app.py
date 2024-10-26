@@ -101,7 +101,7 @@ def is_name(input_text):
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
     if is_biblical_text(prompt):
-        return f"Provide biblical context and meaning for the Bible verse {prompt}"
+        return f"Provide biblical context as narration and meaning for the Bible verse {prompt}"
     elif is_name(prompt):
         return f"Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}"
     else:
