@@ -105,21 +105,21 @@ guidelines = """Use clear, specific language. Avoid unnecessary instructions or 
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
-appeal ="""Begin by describing a universal human experience or emotion that is relevant to the topic at hand. This helped to establish a connection with his audience and make the topic more relatable."""
+introduction = "Providing context, background information, and an overview of the passage, including its literary and historical settings, the author's purpose, and the theological themes, as well as engaging the audience and previewing the main points to be covered."
 
-description="""describe the human condition in relation to the experience or emotion he introduced earlier. This often involved highlighting the problems, contradictions, or paradoxes that humans face in this area."""
+exegesis = "Analyzing the words, phrases, and sentences of the passage in their original language and cultural context, including understanding the lexical meaning of key words and phrases, examining the grammatical and syntactical structure, identifying literary devices and rhetorical techniques, considering the historical and cultural background, and evaluating the theological implications."
 
-solution="""Present the Bible-based solution to the problem or paradox he described earlier. This often involved explaining how the Bible provides a coherent and satisfying answer to the human dilemma."""
+exposition = "Presenting the main ideas and theological themes of the passage in a clear and concise manner, including identifying the central argument or proposition, explaining the relationships between ideas and concepts, providing bridges between verses, highlighting key figures and events, and synthesizing the ideas and themes into a cohesive whole."
 
-illustration="""Use illustrations and analogies to explain complex ideas in simple terms. Use stories, metaphors, or examples to help his audience understand the Bible-based solution."""
+application = "Explaining and illustrating how to apply the main ideas and theological themes of the passage to everyday life, including identifying moral and ethical implications, providing practical suggestions, encouraging reflection, offering warnings and admonitions, and calling the audience to action."
 
-defense="""Anticipate and respond to common objections or criticisms of the Bible-based solution. This often involved using reason, evidence, and logical argument to defend the Bible-based position."""
+conclusion = "Summarizing the main points and providing a final application, call to action, or challenge, including restating the main arguments and themes, highlighting key takeaways, providing a memorable summary, and encouraging the audience to respond and act on the message of the passage."
 
 
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
     if is_bible_verse(prompt):
-        return f"""Using {bible}, Provide A. {appeal}. B. {description}. C.{solution}. D. {illustration}. E. {defense}. These must be based on the Bible verse {prompt}. 
+        return f"""Using {bible}, Provide A. {introduction}. B. {exegesis}. C.{exposition}. D. {application}. E. {conclusion}. These must be based on the Bible verse {prompt}. 
         {guidelines}"""
     elif is_name(prompt):
         return f"Using {bible}, Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}. {guidelines}"
