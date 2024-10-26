@@ -68,6 +68,13 @@ max_tokens = st.slider(
 #     </style>
 #     """, unsafe_allow_html=True)
 
+#language
+#language option
+language = ["English","Cebuano"]
+selected_language = st.selectbox(
+    'Select language', language, index=0,format_func=lambda x: x.upper()
+)
+
 # Display chat messages from history in a scrollable container if there are messages
 if st.session_state.messages:
     st.markdown('<div class="chat-container">', unsafe_allow_html=True)
@@ -101,7 +108,7 @@ def is_name(input_text):
 bible = "New King James Version"
 
 #guidelines
-guidelines = """Use clear, specific language. Avoid unnecessary instructions or bland statements.
+guidelines = """Use clear, specific {language_selected}. Avoid unnecessary instructions or bland statements.
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
