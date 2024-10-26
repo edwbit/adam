@@ -148,7 +148,7 @@ if prompt := st.chat_input("Type a biblical character or bible verse"):
             max_tokens=max_tokens,
             stream=True
         )
-        with st.chat_message("assistant", avatar="✨"):
+        with st.chat_message("assistant", avatar="📖"):
             chat_responses_generator = generate_chat_responses(chat_completion)
             full_response = st.write_stream(chat_responses_generator)
     except Exception as e:
