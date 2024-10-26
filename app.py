@@ -97,15 +97,16 @@ def is_name(input_text):
     # You can improve this with more sophisticated checks
     # For now, this is a simple assumption: if it's a single word, treat it as a name
     return len(input_text.split()) == 1
-
+# define Bible version
+bibble = "New King James Version"
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
     if is_biblical_text(prompt):
-        return f"Provide biblical context as narration, meaning, key points, and life application for the Bible verse {prompt}. Do not add anything else"
+        return f"Using {bible}, Provide biblical context as narration, meaning, key points, and life application for the Bible verse {prompt}. Do not add anything else"
     elif is_name(prompt):
-        return f"Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}."
+        return f"Using {bible}, Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}."
     else:
-        return f"Provide a biblical description for the keyword '{prompt}'"
+        return f"Using {bible}, Provide a biblical description for the keyword '{prompt}'"
 
 # Handle new chat input
 if prompt := st.chat_input("Type a biblical character or bible verse"):
