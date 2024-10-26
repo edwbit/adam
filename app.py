@@ -72,7 +72,7 @@ max_tokens = st.slider(
 if st.session_state.messages:
     st.markdown('<div class="chat-container">', unsafe_allow_html=True)
     for message in st.session_state.messages:
-        avatar = '✨' if message["role"] == "assistant" else '🤠'
+        avatar = '📖' if message["role"] == "assistant" else '😊'
         with st.chat_message(message["role"], avatar=avatar):
             st.markdown(message["content"])
     st.markdown('</div>', unsafe_allow_html=True)
@@ -102,7 +102,8 @@ bible = "New King James Version"
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
     if is_biblical_text(prompt):
-        return f"Using {bible}, Provide biblical context as narration, exegesis, meaning, key points backed with bible verses, illsutration, and life application for the Bible verse {prompt}. Do not add anything else and Biblical truth should stand"
+        return f"Using {bible}, Provide  exegesis of each keyword, biblical context as a dialog, meaning, key points backed with bible verses, illsutration, and life application for the Bible verse {prompt}. 
+        Do not add anything else and Biblical truth should stand"
     elif is_name(prompt):
         return f"Using {bible}, Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}."
     else:
@@ -115,7 +116,7 @@ if prompt := st.chat_input("Type a biblical character or bible verse"):
     # st.session_state.messages.append({"role": "user", "content": f"{prompt} \n{task_description}\nProvide links to source if you can"})
     st.session_state.messages.append({"role": "user", "content": f" Provide brief and concise: {prompt} \n{task_description} \nProvide cross-references in the Bible if any"})
 
-    with st.chat_message("user", avatar='🤠'):
+    with st.chat_message("user", avatar='😊'):
         st.markdown(prompt)
 
     try:
