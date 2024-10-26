@@ -101,8 +101,8 @@ def is_name(input_text):
 bible = "New King James Version"
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
-    if is_biblical_text(prompt):
-        return f"""Using {bible}, Provide  exegesis of each keyword, biblical context as a dialog, meaning, key points backed with bible verses, illsutration, and life application for the Bible verse {prompt}. 
+    if is_bible_verse(prompt):
+        return f"""Using {bible}, Provide  exegesis of each keyword.Provide biblical context of the verse, meaning, key points backed with bible verses, illsutration, and life application for the Bible verse {prompt}. 
         Do not add anything else and Biblical truth should stand"""
     elif is_name(prompt):
         return f"Using {bible}, Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}."
