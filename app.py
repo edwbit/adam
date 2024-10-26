@@ -107,8 +107,8 @@ guidelines = """Use clear, specific language. Avoid unnecessary instructions or 
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
     if is_bible_verse(prompt):
-        return f"""Using {bible}, Provide  exegesis of each keyword.Provide biblical context of the verse. Provide deep and analytical meaning. 
-        Provide key points backed with bible verses. Provide illustration. Provide life application for the Bible verse {prompt}. 
+        return f"""Using {bible}, Provide  exegesis of each keyword.Provide biblical context of the verse. Provide deep and analytical meaning. Provide exposition.
+        Provide key points backed with bible verses. Provide illustration. Provide spiritual life application. Provide conclusion. Provide call to action. These must be based on the Bible verse {prompt}. 
         {guidelines}"""
     elif is_name(prompt):
         return f"Using {bible}, Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}. {guidelines}"
