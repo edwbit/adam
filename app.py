@@ -88,7 +88,9 @@ def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
 # Function to detect if input is a Bible verse reference
 def is_biblical_text(input_text):
     # Basic regex to check for common Bible reference formats, e.g., "john 1:1"
-    return bool(re.match(r'^[1-3]?[a-zA-Z]+\s\d+:\d+', input_text))
+    pattern = r'^([1-3] )?(?:1st|2nd|3rd|[1-3])? ?[a-zA-Z]+(?: [a-zA-Z]+)?(?: [a-zA-Z]+)?,? \d+:\d+$'
+    return bool(re.match(pattern, input_text, re.IGNORECASE))
+    # return bool(re.match(r'^[1-3]?[a-zA-Z]+\s\d+:\d+', input_text))
 
 # Function to check if the input is a name (for genealogy or notable works)
 def is_name(input_text):
