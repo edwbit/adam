@@ -156,6 +156,18 @@ if prompt := st.chat_input("Type a biblical character or bible verse"):
     
     if isinstance(full_response, str):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
+        # Display the assistant's response with a copy button
+        st.markdown(
+            f"""
+            <div>
+                <p>{full_response}</p>
+                <button onclick="navigator.clipboard.writeText(`{full_response.replace("'", "\\'")}`)">
+                    📋 Copy
+                </button>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
     else:
         combined_response = "\n".join(str(item) for item in full_response)
         st.session_state.messages.append({"role": "assistant", "content": combined_response})
