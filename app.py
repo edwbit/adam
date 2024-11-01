@@ -111,60 +111,60 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use a buleted list for
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
-introduction = """Provide current event, or thought-provoking question
-- Create a "tension" or highlight a problem that the passage addresses
+introduction = """-Provide current event, or thought-provoking question.
+- Create a "tension" or highlight a problem that the passage addresses.
 - Provide essential context without overwhelming:
-  - Historical setting (make it vivid and relatable)
-  - Author's situation and purpose
-  - Connection to the audience's modern experience
-- Preview main points through an engaging metaphor or analogy
-- Share a brief testimony or real-life situation that parallels the passage"""
+  - Historical setting (make it vivid and relatable).
+  - Author's situation and purpose.
+  - Connection to the audience's modern experience.
+- Preview main points through an engaging metaphor or analogy.
+- Share a brief testimony or real-life situation that parallels the passage."""
 
-exegesis = """- Begin with the "big picture" before diving into details
-- Highlight surprising or counterintuitive elements in the text
-- Bring original language insights to life through contemporary parallels
-- Use storytelling techniques to explain historical context
-- Create "aha moments" by revealing hidden connections
-- Compare/contrast with other relevant Scripture passages
-- Address common misconceptions about the passage
-- Include interesting cultural insights that illuminate the text's meaning"""
+exegesis = """- Begin with the "big picture" before diving into details.
+- Highlight surprising or counterintuitive elements in the text.
+- Bring original language insights to life through contemporary parallels.
+- Use storytelling techniques to explain historical context.
+- Create "aha moments" by revealing hidden connections.
+- Compare/contrast with other relevant Scripture passages.
+- Address common misconceptions about the passage.
+- Include interesting cultural insights that illuminate the text's meaning."""
 
-consequence_analysis="""- Present real-life scenarios that illustrate the choices at hand
-- Share testimonies of both positive and negative outcomes
+consequence_analysis="""- Present real-life scenarios that illustrate the choices at hand.
+- Share testimonies of both positive and negative outcomes.
 - Explore the ripple effects of decisions on:
-  - Personal spiritual growth
-  - Relationships
-  - Community impact
-  - Future generations
-- Use compelling metaphors to illustrate long-term consequences
-- Include biblical examples of choices and their outcomes"""
+  - Personal spiritual growth.
+  - Relationships.
+  - Community impact.
+  - Future generations.
+- Use compelling metaphors to illustrate long-term consequences.
+- Include biblical examples of choices and their outcomes."""
 
 exposition = """- Structure main points using memorable phrases or alliteration
-- Weave a consistent theme or metaphor throughout
-- Include strategic moments of silence for reflection
-- Incorporate multi-sensory elements where appropriate
-- Use contrast and comparison to highlight key truths
-- Build tension and resolution into the explanation
-- Include brief but powerful quotes from respected sources
-- Create "landmarks" - memorable statements that anchor main points"""
+- Weave a consistent theme or metaphor throughou.t
+- Include strategic moments of silence for reflection.
+- Incorporate multi-sensory elements where appropriate.
+- Use contrast and comparison to highlight key truths.
+- Build tension and resolution into the explanation.
+- Include brief but powerful quotes from respected sources.
+- Create "landmarks" - memorable statements that anchor main points."""
 
-application = """- Start with small, achievable steps
-- Provide multiple application options for different life situations
-- Include both individual and community applications
-- Share specific examples of people living out these truths
-- Address common obstacles and how to overcome them
-- Create accountability suggestions
-- Include reflection questions for different life stages
-- Suggest practical exercises or challenges for the week ahead"""
+application = """- Start with small, achievable steps.
+- Provide multiple application options for different life situations.
+- Include both individual and community applications.
+- Share specific examples of people living out these truths.
+- Address common obstacles and how to overcome them.
+- Create accountability suggestions.
+- Include reflection questions for different life stages.
+- Suggest practical exercises or challenges for the week ahead."""
 
-conclusion = """- Return to the opening hook with new insight
-- Create a clear and memorable "take-home" truth
-- Provide a specific, achievable challenge
-- Include a powerful closing illustration
-- End with a motivational call to action
-- Share a vision of what could be if truth is applied
-- Close with a prayer that reinforces main points
-- Consider ending with a relevant worship song or Scripture reading"""
+conclusion = """- Return to the opening hook with new insight.
+- Create a clear and memorable "take-home" truth.
+- Provide a specific, achievable challenge.
+- Include a powerful closing illustration.
+- End with a motivational call to action.
+- Share a vision of what could be if truth is applied.
+- Close with a prayer that reinforces main points.
+- Consider ending with a relevant worship song or Scripture reading."""
 
 
 # Function to generate appropriate response based on the input type
