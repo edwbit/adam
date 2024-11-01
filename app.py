@@ -112,7 +112,7 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use a buleted list for
 
 #structure
 introduction = "Use a Provocative Question. Ask a question that challenges current thinking. Make it relevant to people's daily lives"
-body = "Provide 3 key points with 3 related critical questions and rebukes per question"
+body = "Provide 3 key points with 1 related critical question and rebuke per question"
 conclusion = "Summarize the main points. Provide a call to action"
 
 
