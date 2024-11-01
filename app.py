@@ -111,28 +111,10 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use markdown formattin
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
-introduction = """Do the following:
-a. State the bible text. 
-b. Use a Provocative Question. 
- -Ask a question that challenges current thinking. Make it relevant to people's daily lives
-c. Use biblical accounts that would help answer the question asked"""
-
-body = """Provide 3 key points:
-KEY POINT 1:
- -related critical question
- -rebuke
-KEY POINT 2:
- -related critical question
- -rebuke
-KEY POINT 3:
- -related critical question
- -rebuke
-"""
-conclusion = """Do the following:
-Summary:
--Summary of the main points
-Call to action:
--Provide a call to action"""
+introduction = """Provide a list about the bible text. A list of provocative question that challenges current thinking. Make it relevant to people's daily lives.
+Use a list of biblical accounts that would help answer the question asked"""
+body = "Provide a list of 3 key points with question and rebuke"
+conclusion = "Provide a list of summary and call to action"
 
 
 # Function to generate appropriate response based on the input type
