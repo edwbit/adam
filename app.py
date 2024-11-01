@@ -112,7 +112,7 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use bulleted list for 
 
 #structure
 introduction = "State the bible text. State a provocative question that challenges current thinking. Make it relevant to people's daily lives. Contrast modern day christians and biblical accounts that would help answer the question asked."
-body = "Provide a list of 3 key points with question and rebuke"
+body = "Provide a list of 3 key points with biblical accounts to make the point clearer. Provide critialc question and rebuke each point"
 conclusion = "Provide a summary and call to action"
 
 
