@@ -107,14 +107,14 @@ def is_name(input_text):
 bible = "New King James Version"
 
 #guidelines
-guidelines = f"""Use clear, specific {selected_doctrine}. Use markdown formatting for readability. Avoid unnecessary instructions or bland statements.
+guidelines = f"""Use clear, specific {selected_doctrine}. Use bulleted list for formatting and readability. Avoid unnecessary instructions or bland statements.
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
-introduction = """Provide a list about the bible text. A list of provocative question that challenges current thinking. Make it relevant to people's daily lives.
-Use a list of biblical accounts that would help answer the question asked"""
+introduction = """State the bible text. State a provocative question that challenges current thinking. Make it relevant to people's daily lives.
+Use accounts that would help answer the question asked"""
 body = "Provide a list of 3 key points with question and rebuke"
-conclusion = "Provide a list of summary and call to action"
+conclusion = "Provide a summary and call to action"
 
 
 # Function to generate appropriate response based on the input type
