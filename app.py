@@ -129,7 +129,7 @@ exegesis = """- Begin with the "big picture" before diving into details.
 - Address common misconceptions about the passage.
 - Include interesting cultural insights that illuminate the text's meaning."""
 
-consequence_analysis="""- Present real-life scenarios that illustrate the choices at hand.
+consequence_analysis="""- Present real-life scenarios that illustrate the choices as consequences.
 - Share testimonies of both positive and negative outcomes.
 - Explore the ripple effects of decisions on:
   - Personal spiritual growth.
