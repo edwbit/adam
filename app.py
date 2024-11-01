@@ -113,6 +113,7 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use a buleted list for
 #structure
 introduction = "Provide context, background information, and an overview of the passage, including its literary and historical settings, the author's purpose, and the theological themes, as well as engaging the audience and previewing the main points to be covered."
 exegesis = "Analyze the words, phrases, and sentences of the passage in their original language and cultural context, including understanding the lexical meaning of key words and phrases, examining the grammatical and syntactical structure, identifying literary devices and rhetorical techniques, considering the historical and cultural background, and evaluating the theological implications."
+consequence analysis= "Evaluate the potential outcomes of a decision or action, including the potential consequences of not taking a specific course of action."
 exposition = "Present the main ideas and theological themes of the passage in a clear and concise manner, including identifying the central argument or proposition, explaining the relationships between ideas and concepts, providing bridges between verses, highlighting key figures and events, and synthesizing the ideas and themes into a cohesive whole. Expound each idea or theme using biblical accounts and examples"
 application = "Explain and illustrating how to apply the main ideas and theological themes of the passage to everyday life, including identifying moral and ethical implications, providing practical suggestions, encouraging reflection, offering warnings and admonitions, and calling the audience to action."
 conclusion = "Summarize the main points and providing a. final application, b. call to action, or c. challenge, including restating the main arguments and themes, highlighting key takeaways, providing a memorable summary, and encouraging the audience to respond and act on the message of the passage."
@@ -121,7 +122,7 @@ conclusion = "Summarize the main points and providing a. final application, b. c
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
     if is_bible_verse(prompt):
-        return f"""Using {bible}, Provide A. {introduction}. B. {exegesis}. C.{exposition}. D. {application}. E. {conclusion}. These must be based on the Bible verse {prompt}. 
+        return f"""Using {bible}, Provide A. {introduction}. B. {exegesis}. C. {consequence analysis} D.{exposition}. E. {application}. F. {conclusion}. These must be based on the Bible verse {prompt}. 
         {guidelines}"""
     elif is_name(prompt):
         return f"Using {bible}, Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}. {guidelines}"
