@@ -119,7 +119,7 @@ conclusion = "Provide a summary and call to action"
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
     if is_bible_verse(prompt):
-        return f"""Using {bible}, A. {introduction}. B. {body}. C.{conclusion}. These must be based on the Bible verse {prompt}. 
+        return f"""Using {bible}, Do everything required in : A. {introduction}. B. {body}. C.{conclusion}. These must be based on the Bible verse {prompt}. 
         {guidelines}"""
     elif is_name(prompt):
         return f"Using {bible}, Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}. {guidelines}"
