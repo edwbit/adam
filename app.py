@@ -111,12 +111,60 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use a buleted list for
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
-introduction = "Provide context, background information, and an overview of the passage, including its literary and historical settings, the author's purpose, and the theological themes, as well as engaging the audience and previewing the main points to be covered."
-exegesis = "Analyze the words, phrases, and sentences of the passage in their original language and cultural context, including understanding the lexical meaning of key words and phrases, examining the grammatical and syntactical structure, identifying literary devices and rhetorical techniques, considering the historical and cultural background, and evaluating the theological implications."
-consequence_analysis= "Evaluate the potential outcomes of a decision or action, including the potential consequences of not taking a specific course of action."
-exposition = "Present the main ideas and theological themes of the passage in a clear and concise manner, including identifying the central argument or proposition, explaining the relationships between ideas and concepts, providing bridges between verses, highlighting key figures and events, and synthesizing the ideas and themes into a cohesive whole. Expound each idea or theme using biblical accounts and examples"
-application = "Explain and illustrating how to apply the main ideas and theological themes of the passage to everyday life, including identifying moral and ethical implications, providing practical suggestions, encouraging reflection, offering warnings and admonitions, and calling the audience to action."
-conclusion = "Summarize the main points and providing a. final application, b. call to action, or c. challenge, including restating the main arguments and themes, highlighting key takeaways, providing a memorable summary, and encouraging the audience to respond and act on the message of the passage."
+introduction = """Provide current event, or thought-provoking question
+- Create a "tension" or highlight a problem that the passage addresses
+- Provide essential context without overwhelming:
+  - Historical setting (make it vivid and relatable)
+  - Author's situation and purpose
+  - Connection to the audience's modern experience
+- Preview main points through an engaging metaphor or analogy
+- Share a brief testimony or real-life situation that parallels the passage"""
+
+exegesis = """- Begin with the "big picture" before diving into details
+- Highlight surprising or counterintuitive elements in the text
+- Bring original language insights to life through contemporary parallels
+- Use storytelling techniques to explain historical context
+- Create "aha moments" by revealing hidden connections
+- Compare/contrast with other relevant Scripture passages
+- Address common misconceptions about the passage
+- Include interesting cultural insights that illuminate the text's meaning"""
+
+consequence_analysis="""- Present real-life scenarios that illustrate the choices at hand
+- Share testimonies of both positive and negative outcomes
+- Explore the ripple effects of decisions on:
+  - Personal spiritual growth
+  - Relationships
+  - Community impact
+  - Future generations
+- Use compelling metaphors to illustrate long-term consequences
+- Include biblical examples of choices and their outcomes"""
+
+exposition = """- Structure main points using memorable phrases or alliteration
+- Weave a consistent theme or metaphor throughout
+- Include strategic moments of silence for reflection
+- Incorporate multi-sensory elements where appropriate
+- Use contrast and comparison to highlight key truths
+- Build tension and resolution into the explanation
+- Include brief but powerful quotes from respected sources
+- Create "landmarks" - memorable statements that anchor main points"""
+
+application = """- Start with small, achievable steps
+- Provide multiple application options for different life situations
+- Include both individual and community applications
+- Share specific examples of people living out these truths
+- Address common obstacles and how to overcome them
+- Create accountability suggestions
+- Include reflection questions for different life stages
+- Suggest practical exercises or challenges for the week ahead"""
+
+conclusion = """- Return to the opening hook with new insight
+- Create a clear and memorable "take-home" truth
+- Provide a specific, achievable challenge
+- Include a powerful closing illustration
+- End with a motivational call to action
+- Share a vision of what could be if truth is applied
+- Close with a prayer that reinforces main points
+- Consider ending with a relevant worship song or Scripture reading"""
 
 
 # Function to generate appropriate response based on the input type
