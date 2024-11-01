@@ -111,9 +111,28 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use a buleted list for
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
-introduction = "Use a Provocative Question. Ask a question that challenges current thinking. Make it relevant to people's daily lives"
-body = "Provide 3 key points with 1 related critical question and rebuke per question"
-conclusion = "Summarize the main points. Provide a call to action"
+introduction = """Do the following:
+##State the bible text. 
+##Use a Provocative Question. 
+-Ask a question that challenges current thinking. Make it relevant to people's daily lives"""
+
+body = """Do the following:
+##Provide 3 key points:
+1. Key point 1:
+-related critical question
+-rebuke
+2. Key point 2:
+-related critical question
+-rebuke
+3. Key point 3:
+-related critical question
+-rebuke
+"""
+conclusion = """Do the following:
+##Summary:
+-Summary of the main points
+##Call to action:
+-Provide a call to action"""
 
 
 # Function to generate appropriate response based on the input type
