@@ -118,7 +118,7 @@ introduction = """Do the following:
 -Use biblical accounts that would help answer the question asked"""
 
 body = """Do the following:
-##Provide 3 key points:
+Provide 3 key points:
 1. Key point 1:
 -related critical question
 -rebuke
@@ -130,9 +130,9 @@ body = """Do the following:
 -rebuke
 """
 conclusion = """Do the following:
-##Summary:
+Summary:
 -Summary of the main points
-##Call to action:
+Call to action:
 -Provide a call to action"""
 
 
