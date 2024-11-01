@@ -112,9 +112,10 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use markdown formattin
 
 #structure
 introduction = """Do the following:
-##State the bible text. 
-##Use a Provocative Question. 
--Ask a question that challenges current thinking. Make it relevant to people's daily lives"""
+-State the bible text. 
+-Use a Provocative Question. 
+-Ask a question that challenges current thinking. Make it relevant to people's daily lives
+-Use biblical accounts that would help answer the question asked"""
 
 body = """Do the following:
 ##Provide 3 key points:
