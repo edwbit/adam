@@ -54,20 +54,6 @@ max_tokens = st.slider(
     help=f"Adjust the maximum number of tokens (words) for the model's response. Max for selected model: {max_tokens_range}"
 )
 
-# # Custom CSS for the scrollable chat history
-# st.markdown("""
-#     <style>
-#         .chat-container {
-#             max-height: 400px;
-#             overflow-y: auto;
-#             border: 1px solid #ccc;
-#             padding: 10px;
-#             margin-bottom: 0px;
-#             display:none;
-#         }
-#     </style>
-#     """, unsafe_allow_html=True)
-
 #doctrine option
 doctrine = ["Roman Catholic and other Sunday Keepers","Seventh-day Adventist and other Sabbath Keepers"]
 selected_doctrine = st.selectbox(
