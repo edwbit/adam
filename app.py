@@ -107,8 +107,7 @@ Provide critical question that would defend and support the {selected_doctrine} 
 a rebuke that would defend and support the {selected_doctrine} doctrine, a dichotomy for each point that would defend and support the {selected_doctrine} doctrine.
 Make sure that these do not contracdict the {selected_doctrine} doctrine"""
 
-conclusion = f"""Provide a summary and call to action. Make sure that these defend and support the {selected_doctrine} doctrine"""
-
+conclusion = f"""Provide a summary and call to action that do not cotradict that {selected_doctrine} doctrine."""
 
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
