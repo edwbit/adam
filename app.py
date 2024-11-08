@@ -55,7 +55,7 @@ max_tokens = st.slider(
 )
 
 #doctrine option
-doctrine = ["Roman Catholic and other Sunday Keepers","Seventh-day Adventist and other Sabbath Keepers"]
+doctrine = ["Roman Catholic and other Sunday Keepers","Seventh-day Adventist"]
 selected_doctrine = st.selectbox(
     'Select doctrine', doctrine, index=0,format_func=lambda x: x.upper()
 )
