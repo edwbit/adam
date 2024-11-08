@@ -98,7 +98,7 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use bulleted list for 
 
 #structure
 introduction = f"""State the bible text. State a provocative question for {selected_doctrine} that challenges current thinking. 
-Provide a real-life and factual short story or illusttration of common people. 
+Provide a real-life and biblical short story. 
 Contrast modern day {selected_doctrine} and biblical accounts that would help answer the question asked. 
 Make sure that these defend and support the {selected_doctrine} doctrine"""
 
