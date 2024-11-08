@@ -98,8 +98,8 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use bulleted list for 
 
 #structure
 introduction = f"State the bible text. State a provocative question that challenges current thinking. Make it relevant to people's daily lives. Provide a real-life and factual short story or illusttration of common people. A related world data, trivia or statistics. Contrast modern day christians and biblical accounts that would help answer the question asked. Do this while defending {selected_doctrine}"
-body = f"Provide a list of 3 key points with expounded parallel biblical accounts  to makethe point clearer. Provide critical question, a controversy, a rebuke, a dichotomy each point. Do this while defending {{selected_doctrine}"
-conclusion = f"Provide a summary and call to action. Do this while defending {{selected_doctrine}"
+body = f"Provide a list of 3 key points with expounded parallel biblical accounts  to makethe point clearer. Provide critical question, a controversy, a rebuke, a dichotomy each point. Do this while defending {selected_doctrine}"
+conclusion = f"Provide a summary and call to action. Do this while defending {selected_doctrine}"
 
 
 # Function to generate appropriate response based on the input type
