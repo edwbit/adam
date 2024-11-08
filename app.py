@@ -62,12 +62,12 @@ selected_doctrine = st.selectbox(
 
 # Display chat messages from history in a scrollable container if there are messages
 if st.session_state.messages:
-    st.markdown('<div class="chat-container">', unsafe_allow_html=True)
+    # st.markdown('<div class="chat-container">', unsafe_allow_html=True)
     for message in st.session_state.messages:
         avatar = '📖' if message["role"] == "assistant" else '😊'
         with st.chat_message(message["role"], avatar=avatar):
             st.markdown(message["content"])
-    st.markdown('</div>', unsafe_allow_html=True)
+    # st.markdown('</div>', unsafe_allow_html=True)
 else:
     st.write("No chat history yet. Start a conversation by typing a message.")
 
