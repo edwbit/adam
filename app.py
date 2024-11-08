@@ -97,7 +97,7 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use bulleted list for 
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
-introduction = "State the bible text. State a provocative question that challenges current thinking. Make it relevant to people's daily lives. Provide a factual short story of common people. A related world data, trivia or statistics. Contrast modern day christians and biblical accounts that would help answer the question asked."
+introduction = "State the bible text. State a provocative question that challenges current thinking. Make it relevant to people's daily lives. Provide a real-life and factual short story or illusttration of common people. A related world data, trivia or statistics. Contrast modern day christians and biblical accounts that would help answer the question asked."
 body = "Provide a list of 3 key points with expounded parallel biblical accounts  to make the point clearer. Provide critical question, a controversy, a rebuke, a dichotomy each point"
 conclusion = "Provide a summary and call to action"
 
