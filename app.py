@@ -97,9 +97,9 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use bulleted list for 
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
-introduction = f"""State the bible text. State a provocative question that challenges current thinking. 
+introduction = f"""State the bible text. State a provocative question for {selected_doctrine} that challenges current thinking. 
 Provide a real-life and factual short story or illusttration of common people. 
-Contrast modern day christians and biblical accounts that would help answer the question asked. 
+Contrast modern day {selected_doctrine} and biblical accounts that would help answer the question asked. 
 Make sure that these defend and support the {selected_doctrine} doctrine"""
 
 body = f"""Provide a list of 3 key points with expounded parallel biblical accounts  to makethe points clearer. 
