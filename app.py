@@ -102,8 +102,10 @@ Provide a real-life and factual short story or illusttration of common people.
 Contrast modern day {selected_doctrine} and biblical accounts that would help answer the question asked. 
 Make sure that these defend and support the {selected_doctrine} doctrine"""
 
-body = f"""Provide a list of 3 key points with expounded parallel biblical accounts  to makethe points clearer. 
-Provide critical question, a controversy, a rebuke, a dichotomy for each point. Make sure that these defend and support the {selected_doctrine} doctrine"""
+body = f"""Provide a list of 3 key points with expounded parallel biblical accounts  to make the points clearer. 
+Provide critical question that would defend and support the {selected_doctrine} doctrine, a controversy that would defend and support the {selected_doctrine} doctrine, 
+a rebuke that would defend and support the {selected_doctrine} doctrine, a dichotomy for each point that would defend and support the {selected_doctrine} doctrine.
+Make sure that these do not contracdict the {selected_doctrine} doctrine"""
 
 conclusion = f"""Provide a summary and call to action. Make sure that these defend and support the {selected_doctrine} doctrine"""
 
