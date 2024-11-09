@@ -127,7 +127,7 @@ if prompt := st.chat_input("Type a biblical character or bible verse"):
     # Generate specific task based on user input
     task_description = generate_response_based_on_input(prompt)
     # st.session_state.messages.append({"role": "user", "content": f"{prompt} \n{task_description}\nProvide links to source if you can"})
-    st.session_state.messages.append({"role": "user", "content": f" Provide brief and concise: {prompt} \n{task_description} \nProvide cross-references in the Bible if any"})
+    st.session_state.messages.append({"role": "user", "content": f" Provide comprehensive: {prompt} \n{task_description} \nProvide cross-references in the Bible if any"})
 
     with st.chat_message("user", avatar='😊'):
         st.markdown(prompt)
