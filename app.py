@@ -98,15 +98,16 @@ guidelines = f"""Use clear, specific {selected_doctrine}. Use bulleted list for 
 
 #structure
 introduction = f"""State the bible text. State a provocative question for {selected_doctrine} that challenges current thinking. 
-Provide a real-life, biblical,rich and alive narrative story. 
+Tell an illustrative biblical story to motivate and inspire the audience. 
 Contrast modern day {selected_doctrine} and biblical accounts that would help answer the question asked. 
 Make sure that these defend and support the {selected_doctrine} doctrine"""
 
 body = f"""Provide a list of 1 key point with expounded parallel biblical accounts  to make the points clearer. 
-Provide critical question that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the critical question and expoud or exemplify it using biblical truth. .
-Provide a controversy that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the controversy and expoud or exemplify it using biblical truth. . 
-Provide a rebuke that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the rebuke and expoud or exemplify it using biblical truth. . 
-Provide a dichotomy for each point that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the dichotomy and expoud or exemplify it using biblical truth. 
+Provide critical question that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the critical question; expoud or exemplify the answer using biblical truth. .
+Provide a controversy that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the controversy and expoud or exemplify the answer using biblical truth. . 
+Provide a rebuke that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the rebuke; expoud or exemplify the answer using biblical truth. . 
+Provide a dichotomy for each point that would defend and support the {selected_doctrine} doctrine. 
+Provide biblical answer to the dichotomy; expoud or exemplify the answer using biblical truth. 
 Make sure that these do not contracdict the {selected_doctrine} doctrine"""
 
 conclusion = f"""Provide a summary and call to action that do not cotradict that {selected_doctrine} doctrine."""
