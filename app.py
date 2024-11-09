@@ -99,7 +99,7 @@ guidelines = f"""Use clear, specific words based on {selected_doctrine} doctrine
 #structure
 introduction = f"""State the bible text. State a provocative question for {selected_doctrine} that challenges current thinking. 
 Tell an illustrative biblical story to motivate and inspire the audience. 
-Contrast modern day {selected_doctrine} and biblical accounts that would help answer the question asked. 
+Contrast modern day christians and biblical accounts that would help answer the question asked. 
 Make sure that these defend and support the {selected_doctrine} doctrine"""
 
 body = f"""Provide a list of 1 key point with expounded parallel biblical accounts  to make the points clearer. 
