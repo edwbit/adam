@@ -122,7 +122,7 @@ def generate_response_based_on_input(prompt):
     elif is_name(prompt):
         return f"Using {bible}, Provide biblical genealogy, historical biography, spouse name or concubines if any for the name {prompt}. {guidelines}"
     else:
-        return f"Using {bible}, Provide a biblical description for the keyword '{prompt}'. {guidelines}"
+        return f"Using {bible}, Provide a biblical description for the keyword '{prompt}'. Provide signigicant events and controversies. Provide historical events that support it.{guidelines}"
 
 # Handle new chat input
 if prompt := st.chat_input("Type a biblical character or bible verse"):
