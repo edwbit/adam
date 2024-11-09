@@ -103,10 +103,10 @@ Contrast modern day {selected_doctrine} and biblical accounts that would help an
 Make sure that these defend and support the {selected_doctrine} doctrine"""
 
 body = f"""Provide a list of 1 key point with expounded parallel biblical accounts  to make the points clearer. 
-Provide critical question that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the critical question.
-Provide a controversy that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the controversy. 
-Provide a rebuke that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the rebuke. 
-Procide a dichotomy for each point that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the dichotomy. 
+Provide critical question that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the critical question and expoud or exemplify it using biblical truth. .
+Provide a controversy that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the controversy and expoud or exemplify it using biblical truth. . 
+Provide a rebuke that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the rebuke and expoud or exemplify it using biblical truth. . 
+Provide a dichotomy for each point that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the dichotomy and expoud or exemplify it using biblical truth. 
 Make sure that these do not contracdict the {selected_doctrine} doctrine"""
 
 conclusion = f"""Provide a summary and call to action that do not cotradict that {selected_doctrine} doctrine."""
