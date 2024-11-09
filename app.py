@@ -93,7 +93,7 @@ def is_name(input_text):
 bible = "New King James Version"
 
 #guidelines
-guidelines = f"""Use clear, specific {selected_doctrine}. Use bulleted list for formatting and readability. Avoid unnecessary instructions or bland statements.
+guidelines = f"""Use clear, specific words based on {selected_doctrine} doctrine. Use bulleted list for formatting and readability. Avoid unnecessary instructions or bland statements.
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
@@ -103,11 +103,11 @@ Contrast modern day {selected_doctrine} and biblical accounts that would help an
 Make sure that these defend and support the {selected_doctrine} doctrine"""
 
 body = f"""Provide a list of 1 key point with expounded parallel biblical accounts  to make the points clearer. 
-Provide critical question that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the critical question; expoud or exemplify the answer using biblical truth. .
-Provide a controversy that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the controversy and expoud or exemplify the answer using biblical truth. . 
-Provide a rebuke that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the rebuke; expoud or exemplify the answer using biblical truth. . 
+Provide critical question that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the critical question; expound or exemplify the answer using biblical truth.
+Provide a controversy that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the controversy and expound or exemplify the answer using biblical truth.
+Provide a rebuke that would defend and support the {selected_doctrine} doctrine. Provide biblical answer to the rebuke; expound or exemplify the answer using biblical truth.
 Provide a dichotomy for each point that would defend and support the {selected_doctrine} doctrine. 
-Provide biblical answer to the dichotomy; expoud or exemplify the answer using biblical truth. 
+Provide biblical answer to the dichotomy; expound or exemplify the answer using biblical truth. 
 Make sure that these do not contracdict the {selected_doctrine} doctrine"""
 
 conclusion = f"""Provide a summary and call to action that do not cotradict that {selected_doctrine} doctrine."""
