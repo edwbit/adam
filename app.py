@@ -26,11 +26,11 @@ if "selected_model" not in st.session_state:
     st.session_state.selected_model = None
 
 models = {
-    "llama-3.2-90b-text-preview": {"name": "llama-3.2-90b-text-preview", "tokens": 8192},
+    "llama-3.2-90b-vision-preview": {"name": "llama-3.2-90b-vision-preview", "tokens": 8192},
     "mixtral-8x7b-32768": {"name": "Mixtral-8x7b-Instruct-v0.1", "tokens": 32768},
     "gemma2-9b-it":{"name":"gemma2-9b-it", "tokens":8192},
     "llama3-groq-70b-8192-tool-use-preview": {"name":"llama3-groq-70b-8192-tool-use-preview", "tokens":8192},
-}
+   }
 
 # Layout for model selection and max token slider
 model_option = st.selectbox(
