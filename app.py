@@ -1,38 +1,42 @@
+import re
 import streamlit as st
 from typing import Generator
 from groq import Groq
 
 # Set up the page configuration
-st.set_page_config(page_icon="🚀", layout="centered", page_title="Groq Super Chat")
+st.set_page_config(page_icon="🕎", layout="centered", page_title="Groq Adam")
 
-# Add Sidebar Menu
-st.sidebar.title("Groq Super Chat")  # App name
+st.sidebar.title("Groq Adam")  # App name
 st.sidebar.caption("App created by AI")
+
+# Input for API key with password masking
 api_key = st.sidebar.text_input("Enter your API key and press Enter", type="password")
 
+# Initialize client only if API key is provided
+client = None
+if api_key:
+    client = Groq(api_key=api_key)
+
+# Button to reset chat history
 if st.sidebar.button("New Chat"):
     st.session_state.messages = []  # Clear the chat history
 
-# Initialize the Groq client with the provided API key
-client = Groq(api_key=api_key)
+st.subheader("Groq Adam", divider="rainbow", anchor="false")
 
-st.subheader("Super Chat", divider="rainbow", anchor="false")
-
-# Initialize chat history and selected model
+# Initialize chat history and selected model if not already set
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
 if "selected_model" not in st.session_state:
     st.session_state.selected_model = None
 
-# Define model details
 models = {
     "llama-3.2-90b-vision-preview": {"name": "llama-3.2-90b-vision-preview", "tokens": 8192},
-    "llama-3.1-70b-versatile": {"name": "llama-3.1-70b-versatile", "tokens": 32768},
     "mixtral-8x7b-32768": {"name": "Mixtral-8x7b-Instruct-v0.1", "tokens": 32768},
+    "gemma2-9b-it": {"name": "gemma2-9b-it", "tokens": 8192},
+    "llama3-groq-70b-8192-tool-use-preview": {"name": "llama3-groq-70b-8192-tool-use-preview", "tokens": 8192},
 }
 
-# Layout for model selection and max token slider
 model_option = st.selectbox(
     "Choose a model:",
     options=list(models.keys()),
@@ -40,7 +44,7 @@ model_option = st.selectbox(
     index=0
 )
 
-# Detect model change and clear chat history if the model has changed
+# Detect model change and clear chat history if the model changes
 if st.session_state.selected_model != model_option:
     st.session_state.messages = []
     st.session_state.selected_model = model_option
@@ -53,64 +57,67 @@ max_tokens = st.slider(
     max_value=max_tokens_range,
     value=min(32768, max_tokens_range),
     step=1024,
-    help=f"Adjust the maximum number of tokens (words) for the model's response. Max for selected model: {max_tokens_range}"
+    help="Adjust the maximum number of tokens for the model's response."
 )
 
-# Custom CSS for the scrollable chat history
-# st.markdown("""
-#     <style>
-#         .chat-container {
-#             max-height: 400px;
-#             overflow-y: auto;
-#             border: 1px solid #ccc;
-#             padding: 10px;
-#             margin-bottom: 0px;
-#         }
-#     </style>
-#     """, unsafe_allow_html=True)
+# Doctrine selection
+doctrine = ["Roman Catholic and other Sunday Keepers", "Seventh-day Adventist"]
+selected_doctrine = st.selectbox(
+    "Select doctrine", doctrine, index=0, format_func=lambda x: x.upper()
+)
 
-# Display chat messages from history in a scrollable container if there are messages
 if st.session_state.messages:
-    st.markdown('<div class="chat-container">', unsafe_allow_html=True)
     for message in st.session_state.messages:
-        avatar = '✨' if message["role"] == "assistant" else '🤠'
+        avatar = "📖" if message["role"] == "assistant" else "😊"
         with st.chat_message(message["role"], avatar=avatar):
             st.markdown(message["content"])
-    st.markdown('</div>', unsafe_allow_html=True)
 else:
     st.write("No chat history yet. Start a conversation by typing a message.")
 
-# Function to generate chat responses
 def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
     for chunk in chat_completion:
         if chunk.choices[0].delta.content:
             yield chunk.choices[0].delta.content
 
-# Handle new chat input
-if prompt := st.chat_input("What do you want to ask?"):
-    st.session_state.messages.append({"role": "user", "content": f"{prompt} \nProvide links to source if you can"})
+def is_bible_verse(input_text):
+    pattern = r"^([1-3] )?(?:1st|2nd|3rd|[1-3])? ?[a-zA-Z]+(?: [a-zA-Z]+)?,? \d+:\d+$"
+    return bool(re.match(pattern, input_text, re.IGNORECASE))
 
-    with st.chat_message("user", avatar='🤠'):
+def is_name(input_text):
+    return len(input_text.split()) == 1
+
+bible = "New King James Version"
+guidelines = f"Use clear, specific words based on {selected_doctrine} doctrine. Avoid unnecessary instructions."
+
+def generate_response_based_on_input(prompt):
+    if is_bible_verse(prompt):
+        return f"Using {bible}, complete the task in sections A, B, and C based on {prompt}. {guidelines}"
+    elif is_name(prompt):
+        return f"Provide a biblical genealogy and historical background for {prompt}. {guidelines}"
+    else:
+        return f"Describe the biblical significance of '{prompt}'. {guidelines}"
+
+if prompt := st.chat_input("Type a biblical character or Bible verse"):
+    task_description = generate_response_based_on_input(prompt)
+    st.session_state.messages.append({"role": "user", "content": prompt})
+
+    with st.chat_message("user", avatar="😊"):
         st.markdown(prompt)
 
-    try:
-        chat_completion = client.chat.completions.create(
-            model=model_option,
-            messages=[
-                {"role": m["role"], "content": m["content"]}
-                for m in st.session_state.messages
-            ],
-            max_tokens=max_tokens,
-            stream=True
-        )
-        with st.chat_message("assistant", avatar="✨"):
-            chat_responses_generator = generate_chat_responses(chat_completion)
-            full_response = st.write_stream(chat_responses_generator)
-    except Exception as e:
-        st.error(e, icon="🚨")
-    
-    if isinstance(full_response, str):
-        st.session_state.messages.append({"role": "assistant", "content": full_response})
+    if client:  # Ensure client is initialized
+        try:
+            chat_completion = client.chat.completions.create(
+                model=model_option,
+                messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages],
+                max_tokens=max_tokens,
+                stream=True
+            )
+            with st.chat_message("assistant", avatar="📖"):
+                chat_responses_generator = generate_chat_responses(chat_completion)
+                full_response = "".join(chat_responses_generator)
+                st.write(full_response)
+                st.session_state.messages.append({"role": "assistant", "content": full_response})
+        except Exception as e:
+            st.error(f"An error occurred: {e}", icon="🚨")
     else:
-        combined_response = "\n".join(str(item) for item in full_response)
-        st.session_state.messages.append({"role": "assistant", "content": combined_response})
+        st.error("Please provide a valid API key to generate a response.")
