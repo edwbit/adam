@@ -98,8 +98,7 @@ guidelines = f"""Use clear, specific words based on {selected_doctrine} doctrine
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 #structure
-opening_hook = f"""Purpose: Grab attention and connect with the audience.
-
+opening_hook = f"""Grab attention and connect with the audience.
 Start with a relatable story, a striking question, or a vivid image.
 Example: 'Have you ever felt like you’re stuck in a valley, unable to see the mountain ahead? I remember a time when I couldn’t even imagine climbing out of my own mess—until something shifted.'"""
 
@@ -107,21 +106,21 @@ core_principle = f"""Introduce a short Bible verse, quote, or principle tied to 
 Example: "In Isaiah 40:31, it says, ‘But those who hope in the Lord will renew their strength. They will soar on wings like eagles.’ Today, we’re talking about rising above."
 Briefly explain the context or meaning in simple terms."""
 
-problem =f""" Purpose: Highlight a relatable struggle or tension.
+problem =f""" Highlight a relatable struggle or tension.
 Describe a common human challenge tied to your theme (e.g., doubt, fear, exhaustion).
 Use a personal anecdote, observation, or hypothetical scenario.
 Example: We all face moments where life weighs us down—bills pile up, relationships strain, or we just feel lost. It’s like gravity pulling us back every time we try to stand."""
 
-turn= f"""Purpose: Offer hope and a solution through the core principle.
+turn= f"""Offer hope and a solution through the core principle.
 Connect the struggle to the scripture/principle.
 Share how it transforms the problem—practical or spiritual insight.
 Example: "But Isaiah doesn’t leave us in the valley. Waiting on God isn’t passive—it’s active trust. It’s choosing to hope when everything says give up. I’ve seen it lift people from despair to purpose."""
 
-application = f"""Purpose: Make it actionable for the audience.
+application = f"""Make it actionable for the audience.
 Give 1-2 clear, practical steps or reflections.
 Example: "This week, take five minutes each day to pause and trust God with one burden. Or reach out to someone who’s stuck and lift them up. Small steps build wings."""
 
-closing = f"""Purpose: Inspire and send them out with purpose.
+closing = f"""Inspire and send them out with purpose.
 End with a powerful statement, prayer, or call to action.
 Example: "You were made to soar, not to settle. Let’s rise together, trusting God’s strength. Amen."""
 
