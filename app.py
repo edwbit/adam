@@ -102,7 +102,7 @@ opening_hook = f"""Grab attention and connect with the audience.
 Start with a relatable biblical story, a striking question, or a vivid image. Refrain from using corny stories or cliche"""
 
 core_principle = f"""Introduce a short Bible verse, quote, or principle tied to your theme.
-Briefly provide three in-depth explanation of the context or meaning in simple terms. Support these with biblical verses"""
+Briefly provide three in-depth explanations of the context or meaning in simple terms. Support these with biblical verses"""
 
 problem =f""" Highlight a relatable struggle or tension.
 Describe a common human challenge tied to your theme (e.g., doubt, fear, exhaustion).
@@ -116,7 +116,7 @@ Use biblical accounts.
 """
 
 application = f"""Make it actionable for the audience.
-Give 1-2 clear, practical steps or reflections.
+Give 1-2 clear, practical steps for life application.
 Use biblical accounts.
 """
 
