@@ -110,20 +110,20 @@ Briefly explain the context or meaning in simple terms."""
 problem =f""" Purpose: Highlight a relatable struggle or tension.
 Describe a common human challenge tied to your theme (e.g., doubt, fear, exhaustion).
 Use a personal anecdote, observation, or hypothetical scenario.
-Example: "We all face moments where life weighs us down—bills pile up, relationships strain, or we just feel lost. It’s like gravity pulling us back every time we try to stand.""""
+Example: We all face moments where life weighs us down—bills pile up, relationships strain, or we just feel lost. It’s like gravity pulling us back every time we try to stand."""
 
 turn= f"""Purpose: Offer hope and a solution through the core principle.
 Connect the struggle to the scripture/principle.
 Share how it transforms the problem—practical or spiritual insight.
-Example: "But Isaiah doesn’t leave us in the valley. Waiting on God isn’t passive—it’s active trust. It’s choosing to hope when everything says give up. I’ve seen it lift people from despair to purpose.""""
+Example: "But Isaiah doesn’t leave us in the valley. Waiting on God isn’t passive—it’s active trust. It’s choosing to hope when everything says give up. I’ve seen it lift people from despair to purpose."""
 
 application = f"""Purpose: Make it actionable for the audience.
 Give 1-2 clear, practical steps or reflections.
-Example: "This week, take five minutes each day to pause and trust God with one burden. Or reach out to someone who’s stuck and lift them up. Small steps build wings.""""
+Example: "This week, take five minutes each day to pause and trust God with one burden. Or reach out to someone who’s stuck and lift them up. Small steps build wings."""
 
 closing = f"""Purpose: Inspire and send them out with purpose.
 End with a powerful statement, prayer, or call to action.
-Example: "You were made to soar, not to settle. Let’s rise together, trusting God’s strength. Amen.""""
+Example: "You were made to soar, not to settle. Let’s rise together, trusting God’s strength. Amen."""
 
 # Function to generate appropriate response based on the input type
 def generate_response_based_on_input(prompt):
