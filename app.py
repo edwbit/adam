@@ -106,16 +106,18 @@ Briefly provide three in-depth explanation of the context or meaning in simple t
 
 problem =f""" Highlight a relatable struggle or tension.
 Describe a common human challenge tied to your theme (e.g., doubt, fear, exhaustion).
-Use a personal anecdote, observation, or hypothetical scenario.
+Use biblical accounts.
 """
 
 turn= f"""Offer hope and a solution through the core principle.
 Connect the struggle to the scripture/principle.
-Share how it transforms the problem—practical or spiritual insight.
+Share how it transforms the problem—practical or spiritual insight
+Use biblical accounts.
 """
 
 application = f"""Make it actionable for the audience.
 Give 1-2 clear, practical steps or reflections.
+Use biblical accounts.
 """
 
 closing = f"""Inspire and send them out with purpose.
