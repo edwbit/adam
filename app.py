@@ -126,12 +126,12 @@ End with a powerful statement, prayer, or call to action.
 def generate_response_based_on_input(prompt):
     if is_bible_verse(prompt):
         return f"""Using {bible}, {guidelines} : 
-        {opening_hook}
-        {core_principle}
-        {problem}
-        {turn}
-        {application}
-        {closing}        
+        A. {opening_hook}
+        B> {core_principle}
+        C. {problem}
+        D. {turn}
+        E. {application}
+        F. {closing}        
         These must be based on the Bible verse {prompt}. 
        """
     elif is_name(prompt):
