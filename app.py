@@ -104,31 +104,32 @@ guidelines = f"""Use clear, specific words based on {selected_doctrine} doctrine
 
 # Structure
 opening_hook = f"""Grab attention and connect with the audience.
-Start with a relatable biblical story, a striking question "When was the last time...,. Refrain from using corny stories or cliche"""
+Start with a relatable biblical story, a striking question. Make the Question More Vivid. Add a Brief Modern Example: After the question, insert a short, relatable scenario.
+Tweak the Biblical Connection: Rephrase for emotional punch. Refrain from using corny stories or cliche"""
 core_principle = f"""Introduce Bible verse, context, quote, or principle tied to your theme.
 Bible verse:
-Context:"""
+Enrich the Context:"""
 analyses=f"""Provide three in-depth, meticulous, thorough, and exhaustive analysis of the context or meaning in simple terms. Support these with related biblical verses
 1. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
-  -Life application: Expound on it with example and illustration.
+  -Enhance life application: Expound on it with example and illustration. Make it interactive.
   -Related Bible verse:
 2. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
-  -Life application: Expound on it with example and illustration.
+  -Enhance life application: Expound on it with example and illustration. Make it interactive.
   -Related Bible verse:
 3. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
-  -Life application: Expound on it with example and illustration.
+  -Enhance life application: Expound on it with example and illustration. Make it interactive.
   -Related Bible verse:
 """
 problem = f"""Highlight a relatable struggle or tension.
 Describe a common human challenge tied to your theme (e.g., doubt, fear, exhaustion).
-Use biblical accounts."""
+Heighten the Tension. Use biblical accounts. Add a Modern Parallel."""
 turn = f"""Offer hope and a solution through the core principle.
 Connect the struggle to the scripture/principle.
 Share how it transforms the problem—practical or spiritual insight
-Use biblical accounts."""
+Use biblical accounts. Add a Modern Parallel and make it personal."""
 application = f"""Make it actionable for the audience.
 Give 1-2 clear, practical steps for life application.
 Use biblical accounts."""
