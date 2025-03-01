@@ -106,7 +106,7 @@ guidelines = f"""Use clear, specific words based on {selected_doctrine} doctrine
 opening_hook = f"""Grab attention and connect with the audience.
 Start with a relatable biblical story, a striking question, or a vivid image. Refrain from using corny stories or cliche"""
 core_principle = f"""Introduce a short Bible verse, quote, or principle tied to your theme.
-Briefly provide three in-depth explanations of the context or meaning in simple terms. Support these with biblical verses"""
+Provide three in-depth, meticulous, thorough, and exhaustive analysis of explanations of the context or meaning in simple terms. Support these with biblical verses"""
 problem = f"""Highlight a relatable struggle or tension.
 Describe a common human challenge tied to your theme (e.g., doubt, fear, exhaustion).
 Use biblical accounts."""
