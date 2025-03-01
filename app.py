@@ -109,9 +109,15 @@ core_principle = f"""Introduce a short Bible verse, context, quote, or principle
 Bible verse:
 Context:
 Provide three in-depth, meticulous, thorough, and exhaustive analysis of the context or meaning in simple terms. Support these with related biblical verses
-3 In-depth analyses:
-3 Life application:
-3 Related Bible verse:
+1. In-depth analysis:
+  -Life application:
+  -Related Bible verse:
+2. In-depth analysis:
+  -Life application:
+  -Related Bible verse:
+3. In-depth analysis:
+  -Life application:
+  -Related Bible verse:
 """
 problem = f"""Highlight a relatable struggle or tension.
 Describe a common human challenge tied to your theme (e.g., doubt, fear, exhaustion).
