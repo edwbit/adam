@@ -161,7 +161,7 @@ if prompt := st.chat_input("Type a biblical character or bible verse"):
             ],
             temperature=0.6,
             max_tokens=max_tokens,
-            reasoning_format="hidden"
+            reasoning_format="hidden",
             stream=True
         )
         with st.chat_message("assistant", avatar="📖"):
