@@ -139,7 +139,7 @@ def generate_response_based_on_input(prompt):
         Provide Sermon Title:
         A. {opening_hook}
         B. {core_principle}
-        C. {anayses}
+        C. {analyses}
         D. {problem}
         E. {turn}
         F. {application}
