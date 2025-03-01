@@ -104,7 +104,7 @@ guidelines = f"""Use clear, specific words based on {selected_doctrine} doctrine
 
 # Structure
 opening_hook = f"""Grab attention and connect with the audience.
-Start with a relatable biblical story, a striking question, or a vivid image. Refrain from using corny stories or cliche"""
+Start with a relatable biblical story, a striking question "When was the last time...,. Refrain from using corny stories or cliche"""
 core_principle = f"""Introduce a short Bible verse, context, quote, or principle tied to your theme.
 Provide three in-depth, meticulous, thorough, and exhaustive analysis of the context or meaning in simple terms. Support these with related biblical verses"""
 problem = f"""Highlight a relatable struggle or tension.
