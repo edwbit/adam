@@ -28,7 +28,7 @@ if "selected_model" not in st.session_state:
 models = {
     "deepseek-r1-distill-llama-70b": {"name": "deepseek-r1-distill-llama-70b", "tokens": 16384},
     "deepseek-r1-distill-qwen-32b": {"name": "deepseek-r1-distill-qwen-32b", "tokens": 16384},   
-    }
+}
 
 # Layout for model selection and max token slider
 model_option = st.selectbox(
@@ -62,12 +62,10 @@ selected_doctrine = st.selectbox(
 
 # Display chat messages from history in a scrollable container if there are messages
 if st.session_state.messages:
-    # st.markdown('<div class="chat-container">', unsafe_allow_html=True)
     for message in st.session_state.messages:
         avatar = '📖' if message["role"] == "assistant" else '😊'
         with st.chat_message(message["role"], avatar=avatar):
             st.markdown(message["content"])
-    # st.markdown('</div>', unsafe_allow_html=True)
 else:
     st.write("No chat history yet. Start a conversation by typing a message.")
 
@@ -79,16 +77,13 @@ def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
 
 # Function to detect if input is a Bible verse reference
 def is_bible_verse(input_text):
-    # Basic regex to check for common Bible reference formats, e.g., "john 1:1"
     pattern = r'^([1-3] )?(?:1st|2nd|3rd|[1-3])? ?[a-zA-Z]+(?: [a-zA-Z]+)?(?: [a-zA-Z]+)?,? \d+:\d+$'
     return bool(re.match(pattern, input_text, re.IGNORECASE))
-    # return bool(re.match(r'^[1-3]?[a-zA-Z]+\s\d+:\d+', input_text))
 
 # Function to check if the input is a name (for genealogy or notable works)
 def is_name(input_text):
-    # You can improve this with more sophisticated checks
-    # For now, this is a simple assumption: if it's a single word, treat it as a name
     return len(input_text.split()) == 1
+
 # define Bible version
 bible = "New King James Version"
 
@@ -145,7 +140,6 @@ def generate_response_based_on_input(prompt):
 if prompt := st.chat_input("Type a biblical character or bible verse"):
     # Generate specific task based on user input
     task_description = generate_response_based_on_input(prompt)
-    # st.session_state.messages.append({"role": "user", "content": f"{prompt} \n{task_description}\nProvide links to source if you can"})
     st.session_state.messages.append({"role": "user", "content": f" Provide comprehensive: {prompt} \n{task_description} \nProvide cross-references in the Bible if any"})
 
     with st.chat_message("user", avatar='😊'):
@@ -167,10 +161,13 @@ if prompt := st.chat_input("Type a biblical character or bible verse"):
             chat_responses_generator = generate_chat_responses(chat_completion)
             full_response = st.write_stream(chat_responses_generator)
     except Exception as e:
-        st.error(e, icon="🚨")
+        st.error("Something went wrong. Please try again later.", icon="🚨")
     
     if isinstance(full_response, str):
         st.session_state.messages.append({"role": "assistant", "content": full_response})
     else:
         combined_response = "\n".join(str(item) for item in full_response)
         st.session_state.messages.append({"role": "assistant", "content": combined_response})
+```
+
+In this modified code, if an error occurs during the chat completion process, a user-friendly error message "Something went wrong. Please try again later." is displayed instead of the default error message.
