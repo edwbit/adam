@@ -26,7 +26,7 @@ if "selected_model" not in st.session_state:
     st.session_state.selected_model = None
 
 models = {
-    "deepseek-r1-distill-llama-70b": {"name": "deepseek-r1-distill-llama-70b", "tokens": 32768},
+    "deepseek-r1-distill-llama-70b": {"name": "deepseek-r1-distill-llama-70b", "tokens": 16384},
     "deepseek-r1-distill-qwen-32b": {"name": "deepseek-r1-distill-qwen-32b", "tokens": 16384},   
     "deepseek-r1-distill-llama-70b-specdec": {"name":"deepseek-r1-distill-llama-70b-specdec", "tokens":16384},
 }
