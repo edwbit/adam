@@ -113,15 +113,15 @@ analyses=f"""Provide three in-depth, meticulous, thorough, and exhaustive analys
 1. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
   -Enhance life application: Expound on it with example and illustration. Make it interactive.
-  -Related Bible verse:
+  -Related Bible verse: Provide exposition and connect it to the audience.
 2. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
   -Enhance life application: Expound on it with example and illustration. Make it interactive.
-  -Related Bible verse:
+  -Related Bible verse: Provide exposition and connect it to the audience.
 3. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
   -Enhance life application: Expound on it with example and illustration. Make it interactive.
-  -Related Bible verse:
+  -Related Bible verse: Provide exposition and connect it to the audience.
 """
 problem = f"""Highlight a relatable struggle or tension.
 Describe a common human challenge tied to your theme (e.g., doubt, fear, exhaustion).
