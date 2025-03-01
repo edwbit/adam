@@ -27,8 +27,8 @@ if "selected_model" not in st.session_state:
 
 models = {
     "deepseek-r1-distill-llama-70b": {"name": "deepseek-r1-distill-llama-70b", "tokens": 32768},
-    "gemma2-9b-it":{"name":"gemma2-9b-it", "tokens":8192},
-    "llama3-groq-70b-8192-tool-use-preview": {"name":"llama3-groq-70b-8192-tool-use-preview", "tokens":8192},
+    "deepseek-r1-distill-qwen-32b":{"name":"deepseek-r1-distill-qwen-32b", "tokens":16,384},
+    "deepseek-r1-distill-llama-70b-specdec": {"name":"deepseek-r1-distill-llama-70b-specdec", "tokens":16,384},
 }
 
 # Layout for model selection and max token slider
@@ -48,10 +48,10 @@ max_tokens_range = models[model_option]["tokens"]
 
 max_tokens = st.slider(
     "Max Tokens:",
-    min_value=1024,
+    min_value=8,192,
     max_value=max_tokens_range,
-    value=min(32768, max_tokens_range),
-    step=1024,
+    value=min(16,384, max_tokens_range),
+    step=8,192,
     help=f"Adjust the maximum number of tokens (words) for the model's response. Max for selected model: {max_tokens_range}"
 )
 
@@ -159,7 +159,9 @@ if prompt := st.chat_input("Type a biblical character or bible verse"):
                 {"role": m["role"], "content": m["content"]}
                 for m in st.session_state.messages
             ],
+            temperature=0.6,
             max_tokens=max_tokens,
+            reasoning_format="hidden"
             stream=True
         )
         with st.chat_message("assistant", avatar="📖"):
