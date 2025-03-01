@@ -111,15 +111,15 @@ Context:"""
 analyses=f"""Provide three in-depth, meticulous, thorough, and exhaustive analysis of the context or meaning in simple terms. Support these with related biblical verses
 1. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
-  -Life application:
+  -Life application: Expound on it with example and illustration.
   -Related Bible verse:
 2. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
-  -Life application:
+  -Life application: Expound on it with example and illustration.
   -Related Bible verse:
 3. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
-  -Life application:
+  -Life application: Expound on it with example and illustration.
   -Related Bible verse:
 """
 problem = f"""Highlight a relatable struggle or tension.
