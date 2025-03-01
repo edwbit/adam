@@ -168,6 +168,3 @@ if prompt := st.chat_input("Type a biblical character or bible verse"):
     else:
         combined_response = "\n".join(str(item) for item in full_response)
         st.session_state.messages.append({"role": "assistant", "content": combined_response})
-```
-
-In this modified code, if an error occurs during the chat completion process, a user-friendly error message "Something went wrong. Please try again later." is displayed instead of the default error message.
