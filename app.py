@@ -144,9 +144,7 @@ def generate_response_based_on_input(prompt):
         A. {opening_hook}
         B. {core_principle}
         C. {analyses}
-        D. {problem}
-        E. {turn}
-        F. {application}
+        D. {application}
         G. {closing}        
         These must be based on the Bible verse {prompt}. 
        """
