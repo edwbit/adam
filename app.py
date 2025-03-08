@@ -67,15 +67,15 @@ max_tokens = st.slider(
 
 col1, col2 = st.columns(2)
 
-    with col1:
-    # Doctrine option
-    doctrine = ["Roman Catholic and other Sunday Keepers", "Seventh-day Adventist"]
-    selected_doctrine = st.selectbox(
-        'Select doctrine', doctrine, index=0, format_func=lambda x: x.upper()
-    )
+with col1:
+  # Doctrine option
+  doctrine = ["Roman Catholic and other Sunday Keepers", "Seventh-day Adventist"]
+  selected_doctrine = st.selectbox(
+  'Select doctrine', doctrine, index=0, format_func=lambda x: x.upper()
+  )
 
-    with col2:
-    audience = st.input_box(placeholder="high school students")
+with col2:
+  audience = st.input_box(placeholder="high school students")
 
 # Display chat messages from history
 if st.session_state.messages:
