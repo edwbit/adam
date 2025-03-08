@@ -75,7 +75,7 @@ with col1:
   )
 
 with col2:
-  audience = st.input_box(placeholder="high school students")
+  audience = st.text_input(placeholder="high school students")
 
 # Display chat messages from history
 if st.session_state.messages:
