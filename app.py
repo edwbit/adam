@@ -76,6 +76,7 @@ with col1:
 
 with col2:
   audience = st.text_input(label="Audience", placeholder="high school students")
+  topic = st.text_input(label="Topic", placeholder="God's Day of Rest")
 
 # Display chat messages from history
 if st.session_state.messages:
@@ -105,7 +106,7 @@ def is_name(input_text):
 bible = "New King James Version"
 
 # Guidelines
-guidelines = f"""Use clear, specific words based on {selected_doctrine} doctrine and tailored for {audience} audience. Use bulleted list for formatting and readability. Avoid unnecessary instructions or bland statements.
+guidelines = f"""Use clear, specific words based on {selected_doctrine} doctrine, focusing on {topic} and tailored for {audience} audience. Use bulleted list for formatting and readability. Avoid unnecessary instructions or bland statements.
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 # Structure
