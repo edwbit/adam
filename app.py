@@ -65,11 +65,17 @@ max_tokens = st.slider(
     help=f"Adjust the maximum number of tokens (words) for the model's response. Max for selected model: {max_tokens_range}"
 )
 
+col1, col2 = st.columns(2)
+
+with col1:
 # Doctrine option
 doctrine = ["Roman Catholic and other Sunday Keepers", "Seventh-day Adventist"]
 selected_doctrine = st.selectbox(
     'Select doctrine', doctrine, index=0, format_func=lambda x: x.upper()
 )
+
+with col2:
+audience = st.input_box(placeholder="high school students")
 
 # Display chat messages from history
 if st.session_state.messages:
@@ -99,7 +105,7 @@ def is_name(input_text):
 bible = "New King James Version"
 
 # Guidelines
-guidelines = f"""Use clear, specific words based on {selected_doctrine} doctrine. Use bulleted list for formatting and readability. Avoid unnecessary instructions or bland statements.
+guidelines = f"""Use clear, specific words based on {selected_doctrine} doctrine and tailored for {audience} audience. Use bulleted list for formatting and readability. Avoid unnecessary instructions or bland statements.
         Provide response in proper order and do not add anything else. Provide high quality and real-life illustration if required."""
 
 # Structure
