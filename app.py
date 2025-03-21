@@ -119,15 +119,15 @@ Enrich the Context:"""
 analyses=f"""Provide three in-depth, meticulous, thorough, and exhaustive analysis of the context or meaning in simple terms. Support these with related biblical verses
 1. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
-  -How Jesus exemplify this. How about you?
+  -How Jesus exemplify this? Now ask the audience.
   -Related Bible verse: Provide exposition and connect it to the audience.
 2. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
-  --How Jesus exemplify this. How about you?
+  --How Jesus exemplify this. Now ask the audience.
   -Related Bible verse: Provide exposition and connect it to the audience.
 3. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
-  --How Jesus exemplify this. How about you?
+  --How Jesus exemplify this. Now ask the audience.
   -Related Bible verse: Provide exposition and connect it to the audience.
 """
 problem = f"""Highlight a relatable struggle or tension.
