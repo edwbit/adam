@@ -116,19 +116,12 @@ Tweak the Biblical Connection: Rephrase for emotional punch. Refrain from using 
 core_principle = f"""Introduce Bible verse, context, quote, or principle tied to your theme.
 Bible verse:
 Enrich the Context:"""
-analyses=f"""Provide three in-depth, meticulous, thorough, and exhaustive analysis of the context or meaning in simple terms. Support these with related biblical verses
+analyses=f"""Provide one in-depth, meticulous, thorough, and exhaustive analysis of the context or meaning in simple terms. Support these with related biblical verses
 1. In-depth analysis:
   -in-depth, meticulous, thorough, and exhaustive explanation of the verse
   -How Jesus exemplify this? Now ask the audience.
   -Related Bible verse: Provide exposition and connect it to the audience.
-2. In-depth analysis:
-  -in-depth, meticulous, thorough, and exhaustive explanation of the verse
-  --How Jesus exemplify this. Now ask the audience.
-  -Related Bible verse: Provide exposition and connect it to the audience.
-3. In-depth analysis:
-  -in-depth, meticulous, thorough, and exhaustive explanation of the verse
-  --How Jesus exemplify this. Now ask the audience.
-  -Related Bible verse: Provide exposition and connect it to the audience.
+
 """
 problem = f"""Highlight a relatable struggle or tension.
 Describe a common human challenge tied to your theme (e.g., doubt, fear, exhaustion).
