@@ -111,7 +111,7 @@ guidelines = f"""Use clear, specific words based on {selected_doctrine} doctrine
 
 # Structure
 opening_hook = f"""Grab attention and connect with the audience.
-Start with a relatable biblical story, a striking question. Make the Question More Vivid. Add a Brief Modern Example: After the question, insert a short, relatable scenario.
+Start with a relatable biblical story, a striking question. Make the Question More Vivid. Add a true-to-life story based on history or written books and publications. After the question, insert a short, relatable scenario.
 Tweak the Biblical Connection: Rephrase for emotional punch. Refrain from using corny stories or cliche"""
 core_principle = f"""Introduce Bible verse, context, quote, or principle tied to your theme.
 Bible verse:
